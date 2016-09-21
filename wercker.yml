@@ -3,3 +3,6 @@ build:
   steps:
     - xenoterracide/maven:
         goals: verify
+    - script:
+        name: upload to codecov.io
+        code: bash <(curl -s https://codecov.io/bash) -t 33c0fdae-f0fe-4ec4-b834-c53c0efe3c6a
